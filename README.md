@@ -1,3 +1,5 @@
+**I am not maintaining this repository anymore.**
+
 # PersistenceScript
 
 Generate a persistence script for Metasploit embedded payloads.
